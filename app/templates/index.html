@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Musescore流し込み用文字変換</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Lyrics -> Musescore</h1>
+        <p class="lead">for NEUTRINO</p>
+        <hr class="my-4">
+        <p>NEUTRINO用にMusescoreを用意する際に流し込む歌詞にスペースを自動で追加するやつです。</p>
+        <p>あいうえおきゃきゅきょ→あ い う え お きゃ きゅ きょ </p>
+    </div>
+
+    <!-- form -->
+    <form action="/" method="POST">
+        <div class="container-fluid">
+            <div class="row justify-content-around form-group">
+                <textarea class="col-11 col-md-4 form-control" name="before" rows="4" cols="40">ここにテキストを入れてね</textarea>
+                <div class="col-md-1 my-md-auto">
+                    <input type="submit" class="btn btn-primary btn-lg" value="変換">
+                </div>
+                {% if body %}
+                <textarea class="col-11 col-md-4 form-control" name="after" rows="4">{{body}}</textarea>
+                {% else %}
+                <textarea class="col-11 col-md-4 form-control" name="after" rows="4">ボタンを押すとこっちに出力されるよ</textarea>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+    <!-- form -->
+    <footer class="text-muted ">
+        <div class="container">
+            <p class="text-center">
+                連絡はこちらへ:<a href="https://twitter.com/_Sotono">@_Sotono</a>
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
