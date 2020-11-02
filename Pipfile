@@ -9,6 +9,7 @@ autopep8 = "*"
 [packages]
 flask = "*"
 cd = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
