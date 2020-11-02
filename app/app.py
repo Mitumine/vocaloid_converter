@@ -1,7 +1,7 @@
 # Flaskとrender_template（HTMLを表示させるための関数）をインポート
 from flask import Flask, render_template, request
 import re
-# from models import convert
+from models import convert
 
 
 # Flaskオブジェクトの生成
@@ -20,7 +20,7 @@ def index():
 @app.route('/', methods=['post'])
 def post():
     body = request.form['before']
-    # body = convert.convert(body)
+    body = convert.convert(body)
     return render_template('index.html', body=body)
 
 
